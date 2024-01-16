@@ -9,7 +9,13 @@ pipeline {
                 }
             }
         }
-    }
-    // This is a comment to test if commenting out this line resolves the issue
-    // 如果注释掉这一行是否解决了问题
-}
+        stage('UNIT testing'){
+
+                    steps{
+
+                        script{
+
+                            sh 'mvn test'
+                        }
+                    }
+                }
